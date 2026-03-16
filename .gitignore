@@ -1,0 +1,64 @@
+# =====================
+# Laravel 專案
+# =====================
+laravel/laravel-blog/vendor/
+laravel/laravel-blog/node_modules/
+laravel/laravel-blog/public/build/
+laravel/laravel-blog/public/hot/
+laravel/laravel-blog/public/storage/
+laravel/laravel-blog/storage/*.key
+laravel/laravel-blog/storage/pail/
+laravel/laravel-blog/.env
+laravel/laravel-blog/.env.backup
+laravel/laravel-blog/.env.production
+laravel/laravel-blog/.phpactor.json
+laravel/laravel-blog/.phpunit.result.cache
+laravel/laravel-blog/Homestead.json
+laravel/laravel-blog/Homestead.yaml
+
+# =====================
+# ASP.NET 專案
+# =====================
+aspnet/DemoAPI/bin/
+aspnet/DemoAPI/obj/
+aspnet/DemoAPI/.vs/
+aspnet/DemoAPI/*.user
+aspnet/DemoAPI/*.suo
+aspnet/DemoAPI/*.cache
+
+# =====================
+# Node / npm / front-end
+# =====================
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+
+# =====================
+# Docker / CI/CD
+# =====================
+**/docker-compose.override.yml
+**/docker-compose.*.yml
+**/.docker/
+**/.env.ci
+**/*.log
+**/tmp/
+**/.cache/
+
+# =====================
+# IDE / Editor
+# =====================
+.idea/
+.vscode/
+.zed/
+.fleet/
+*.sublime-workspace
+*.sublime-project
+
+# =====================
+# OS 系統
+# =====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

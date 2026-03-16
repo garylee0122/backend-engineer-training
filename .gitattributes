@@ -1,0 +1,39 @@
+# =================================
+# 所有文字檔自動 LF
+# =================================
+* text=auto eol=lf
+
+# =================================
+# Laravel 專案
+# =================================
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+# =================================
+# ASP.NET 專案
+# =================================
+*.cs diff=csharp
+*.cshtml diff=html
+*.csproj diff=xml
+*.sln diff=none
+
+# =================================
+# Export-ignore (打包 zip 時忽略)
+# =================================
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+
+# Laravel 專案不需要打包的
+laravel/laravel-blog/vendor/ export-ignore
+laravel/laravel-blog/node_modules/ export-ignore
+laravel/laravel-blog/storage/ export-ignore
+laravel/laravel-blog/public/build/ export-ignore
+
+# ASP.NET 專案不需要打包的
+aspnet/DemoAPI/bin/ export-ignore
+aspnet/DemoAPI/obj/ export-ignore
+aspnet/DemoAPI/.vs/ export-ignore
