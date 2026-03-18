@@ -6,6 +6,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+//////////////// Day 1 ///////////////////
+
 // Day 1 - Basic Route
 Route::get('Day1/hello', function () {
     return 'Hello Laravel';
@@ -37,6 +40,8 @@ Route::get('Day1/multiply/{a}/{b}', function ($a, $b) {
     return $a . '*' . $b . ' = ' . $total;
 })->where(['a' => '[0-9]+', 'b' => '[0-9]+']);
 
+
+//////////////// Day 2 ///////////////////
 
 // Day 2 - Route with parameter
 Route::get('Day2/userid/{id}', function ($id) {
@@ -95,3 +100,21 @@ Route::get('Day2Test/product/{id}/{name?}',
  function ($id, $name=null) {
     return "Product: $id - " . ($name ?? 'No Name');
 })->whereNumber('id')->name('product.show');
+
+
+//////////////// Day 3 ///////////////////
+
+use App\Http\Controllers\Day3DemoController;
+
+Route::get('Day3/hello/{name}', [Day3DemoController::class, 'hello']);
+Route::get('Day3/user/{id}/{name?}', [Day3DemoController::class, 'user'])->whereNumber('id');
+
+use App\Http\Controllers\Day3TestController;
+// Day 3 - Test 1
+Route::get('Day3Test/hello/{name}', [Day3TestController::class, 'hello']);
+// Day 3 - Test 2
+Route::get('Day3Test/user/{id}', [Day3TestController::class, 'user']);
+// Day 3 - Test 3
+Route::get('Day3Test/product/{id}', [Day3TestController::class, 'product']);
+// Day 3 - Test 4
+Route::get('Day3Test/orders/{id}', [Day3TestController::class, 'orders']);
