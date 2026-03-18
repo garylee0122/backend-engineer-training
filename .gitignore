@@ -1,30 +1,34 @@
 # =====================
 # Laravel 專案
 # =====================
-laravel/laravel-blog/vendor/
-laravel/laravel-blog/node_modules/
-laravel/laravel-blog/public/build/
-laravel/laravel-blog/public/hot/
-laravel/laravel-blog/public/storage/
-laravel/laravel-blog/storage/*.key
-laravel/laravel-blog/storage/pail/
-laravel/laravel-blog/.env
-laravel/laravel-blog/.env.backup
-laravel/laravel-blog/.env.production
-laravel/laravel-blog/.phpactor.json
-laravel/laravel-blog/.phpunit.result.cache
-laravel/laravel-blog/Homestead.json
-laravel/laravel-blog/Homestead.yaml
+laravel/*/vendor/
+laravel/*/node_modules/
+laravel/*/public/build/
+laravel/*/public/hot/
+laravel/*/public/storage/
+laravel/*/storage/*.key
+laravel/*/storage/pail/
+laravel/*/.env
+laravel/*/.env.backup
+laravel/*/.env.production
+laravel/*/.phpactor.json
+laravel/*/.phpunit.result.cache
+laravel/*/Homestead.json
+laravel/*/Homestead.yaml
+laravel/*/storage/framework/views/*
+laravel/*/storage/framework/cache/*
+laravel/*/storage/framework/sessions/*
+laravel/*/storage/logs/*
 
 # =====================
 # ASP.NET 專案
 # =====================
-aspnet/DemoAPI/bin/
-aspnet/DemoAPI/obj/
-aspnet/DemoAPI/.vs/
-aspnet/DemoAPI/*.user
-aspnet/DemoAPI/*.suo
-aspnet/DemoAPI/*.cache
+aspnet/*/bin/
+aspnet/*/obj/
+aspnet/*/.vs/
+aspnet/*/*.user
+aspnet/*/*.suo
+aspnet/*/*.cache
 
 # =====================
 # Node / npm / front-end
