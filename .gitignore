@@ -19,6 +19,7 @@ laravel/*/storage/framework/views/*
 laravel/*/storage/framework/cache/*
 laravel/*/storage/framework/sessions/*
 laravel/*/storage/logs/*
+laravel/*/database/*.sqlite
 
 # =====================
 # ASP.NET 專案
@@ -29,6 +30,9 @@ aspnet/*/.vs/
 aspnet/*/*.user
 aspnet/*/*.suo
 aspnet/*/*.cache
+aspnet/*/*.db
+aspnet/*/*.sqlite
+aspnet/*/*.sqlite3
 
 # =====================
 # Node / npm / front-end
