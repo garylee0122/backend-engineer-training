@@ -1,4 +1,5 @@
 using DemoAPI.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,19 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// for global model validation error response
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.InvalidModelStateResponseFactory = context =>
+    {
+        return new BadRequestObjectResult(new
+        {
+            status = "error",
+            errors = context.ModelState
+        });
+    };
+});
 
 // sqlite
 //builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=products.db"));

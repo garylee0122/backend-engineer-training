@@ -23,3 +23,21 @@ Route::prefix('day4test/products')->group(function () {
     Route::get('update/{id}/{name?}/{price?}', [Day4TestController::class, 'update'])->whereNumber('id')->whereNumber('price');
     Route::get('delete/{id}', [Day4TestController::class, 'destroy'])->whereNumber('id');
 });
+
+// Day5 Demo
+use App\Http\Controllers\Day5DemoProductController;
+
+Route::prefix('day5/products')->group(function () {
+    Route::post('create', [Day5DemoProductController::class, 'store']);
+    Route::get('/', [Day5DemoProductController::class, 'index']);
+    Route::get('{id}', [Day5DemoProductController::class, 'show'])->whereNumber('id');
+});
+
+// Day5 Test
+use App\Http\Controllers\Day5TestController;
+
+Route::prefix('day5test/products')->group(function () {
+    Route::post('/', [Day5TestController::class, 'insert']);
+    Route::get('/', [Day5TestController::class, 'showAll']);
+    Route::get('{id}', [Day5TestController::class, 'show'])->whereNumber('id');
+});
