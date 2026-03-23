@@ -41,3 +41,11 @@ Route::prefix('day5test/products')->group(function () {
     Route::get('/', [Day5TestController::class, 'showAll']);
     Route::get('{id}', [Day5TestController::class, 'show'])->whereNumber('id');
 });
+
+// Day6 Test
+use App\Http\Controllers\Day6TestController;
+
+Route::prefix('day6/products')->group(function () {
+    Route::put('{id}', [Day6TestController::class, 'update'])->whereNumber('id');
+    Route::delete('{id}', [Day6TestController::class, 'delete'])->whereNumber('id');
+});
