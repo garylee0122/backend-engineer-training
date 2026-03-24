@@ -6,7 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 //////////////// day 1 ///////////////////
 
 // day 1 - Basic Route
@@ -128,4 +127,33 @@ Route::prefix('day4/products')->group(function () {
     Route::get('create', [Day4DemoProductController::class, 'store']);
     Route::get('/', [Day4DemoProductController::class, 'index']);
     Route::get('{id}', [Day4DemoProductController::class, 'show'])->whereNumber('id');
+});
+
+
+//////////////// Views TEST ///////////////////
+
+Route::get('/hello', function () {
+    return view('hello');
+});
+
+Route::get('/products', function () {
+    $products = [
+        ['name' => 'iPhone', 'price' => 30000],
+        ['name' => 'iPad', 'price' => 20000]
+    ];
+
+    return view('products', compact('products'));
+});
+
+Route::get('/input', function () {
+    return view('form');
+});
+
+Route::post('/submit', function (Illuminate\Http\Request $request) {
+    return "Hello " . $request->input('name');
+});
+
+Route::get('/productspage', function () {
+    $products = App\Models\Product::all();
+    return view('products-page', compact('products'));
 });
