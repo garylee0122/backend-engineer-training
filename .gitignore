@@ -33,6 +33,9 @@ aspnet/*/*.cache
 aspnet/*/*.db
 aspnet/*/*.sqlite
 aspnet/*/*.sqlite3
+*.dll
+# temp build
+temp_build/
 
 # =====================
 # Node / npm / front-end
